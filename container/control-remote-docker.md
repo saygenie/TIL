@@ -50,6 +50,34 @@ sudo systemctl restart docker.service
 $ DOCKER_HOST="tcp://{ip or host}:2375" docker ps # 로컬 호스트의 도커가 아니라 원격에 있는 도커에 요청
 ```
 
+혹은 `docker context`를 사용할 수 있다.
+
+```bash
+$ docker context
+Manage contexts
+
+Usage:
+  docker context [command]
+
+Available Commands:
+  create      Create new context
+  export      Export a context to a tar or kubeconfig file
+  import      Import a context from a tar or zip file
+  inspect     Display detailed information on one or more contexts
+  list        List available contexts
+  rm          Remove one or more contexts
+  show        Print the current context
+  update      Update a context
+  use         Set the default context
+
+Flags:
+  -h, --help   Help for context
+
+Use "docker context [command] --help" for more information about a command.
+```
+
+
+
 ### Docker SDK for Python 사용
 
 ```python
@@ -78,6 +106,8 @@ $ DOCKER_HOST="tcp://{ip or host}:2375" python3 main.py
 $ export DOCKER_HOST="tcp://{ip or host}:2375"
 $ python3 main.py
 ```
+
+이외에도 Golang, JavaScript 등 다양한 언어의 SDK로도 사용할 수 있다.
 
 ---
 
